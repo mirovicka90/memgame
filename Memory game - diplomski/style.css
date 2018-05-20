@@ -1,0 +1,44 @@
+body{
+    background:url(images/js.gif);
+}
+.margin-bottom-10 {
+    margin-bottom:10px;
+}
+#div-form{
+    margin-top:100px;
+    margin-left:auto;
+    margin-right:auto;    
+    width: 30%;
+    height: 150px;
+    position: relative;
+    top: 100px;
+    border: 7px solid rgb(36, 189, 36);
+    border-radius: 50px;
+    padding: 10px;
+    font: 1.3em sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    color:black;
+    background: rgb(14, 204, 8);
+   
+}
+
+#login{
+   margin: 10px;
+   display: inline-block;
+  
+}
+
+.btn{
+    font: 0.7em sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    color:black;
+    background:rgb(36, 189, 36);
+    border-radius: 50px;
+    position: relative;
+    bottom:45px;
+    left: 30px;
+    width: 90px;
+    height: 90px;
+}
+
+
