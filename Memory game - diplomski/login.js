@@ -15,13 +15,11 @@ var LoginView = function (model, element) {
 };
 //dohvatamo elemente iz HTML 
 LoginView.prototype.render = function () {
-    this.element.innerHTML = '<div id="div-form"><form action=""><div class="margin-bottom-10"><label for="username" style="display:inline-block;width:100px">Username:</label><input type="text" id="username"></div><class="margin-bottom-10"><label for="password" style="display:inline-block;width:100px">Password:</label><input type="password" id="password"></div<div><button type="button" id="login" class="btn">Login</button></div></form></div>';
+    this.element.innerHTML = '<div id="div-form"><form action=""><div class="margin-bottom-10"><label for="username" style="display:inline-block;width:100px">Username:</label><input type="text" id="username"></div><class="margin-bottom-10"><label for="password" style="display:inline-block;width:100px">Password:</label><input type="password" id="password"></div<div><button type="button" id="login" class="btn">Login</button></div><div><button id="resetBtn" type="reset" value="reset">Reset</button></div></form></div>';
     //na dugme kacimo click event
     document.getElementById('login').addEventListener('click', this.handleLogin);
-    
+    document.getElementById('resetBtn').addEventListener('click', this.resetForm);
 };
-
-  
 
 //citamo elemente iz HTML
 LoginView.prototype.readInputs = function () {
@@ -33,14 +31,8 @@ LoginView.prototype.readInputs = function () {
     }
 
 }
-//provera za unet pogresan username i password
-LoginView.prototype.showErrorMessage = function (msg) {
-    var node = document.createElement("p");
-    var textnode = document.createTextNode(msg);
-    node.appendChild(textnode);
-    this.element.appendChild(node);
 
-}
+
 //povezujemo controller sa modelom i view-om
 var LoginController = function (model, view) {
     this.loginView = view;
@@ -50,8 +42,14 @@ var LoginController = function (model, view) {
 LoginController.prototype.init = function () {
     //bind- forsiranje kao da je ovu funkciju pozvao Controller, a ne dugme
     this.loginView.handleLogin = this.handleLogin.bind(this);
+    this.loginView.resetForm = this.resetForm;
+
     this.loginView.render();
-}
+
+
+
+
+};
 //dodajemo u LoginController funkciju handleLogin, i ona se sad poziva iz LoginContrller-a
 
 
@@ -67,20 +65,32 @@ LoginController.prototype.handleLogin = function (e) {
         window.location.href = 'level1.html';
 
     } else {
-        this.loginView.showErrorMessage('Login failed!'); // za pogresan username i password
-        this.loginView = '';
-    }
-    
+        alert('Login filed!')
+    };
+
 
 };
 
-  
+//reset dugme
+LoginController.prototype.resetForm = function (e) {
+    //console.log("klik");
+    function resetForm(form) {
+        $(':input', form).each(function () {
+            var type = this.type;
+            var tag = this.tagName.toLowerCase();
+            if (loginView.username != username && loginView.password != password);
+            this.value = "";
 
+        });
+    };
+    resetForm();
 
+};
 
 var loginModel = new LoginModel();
 var loginView = new LoginView(loginModel, document.getElementById('main-div'));
 var loginController = new LoginController(loginModel, loginView);
+
 
 loginController.init();
 

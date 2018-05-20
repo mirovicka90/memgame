@@ -2,6 +2,8 @@ var images = ['images/jedan.png', 'images/dva.png', 'images/tri.jpg', 'images/ce
 
 var previousIndex = null;
 var currentIndex = null;
+
+
 var Level1Model = function () {
 
 
@@ -57,11 +59,6 @@ Level1View.prototype.render = function () {
     console.log(shuffle(images));
 
 };
-
-
-
-
-
 $(document).ready(function () {
 
     $(".img").hide();
@@ -95,6 +92,19 @@ $(document).ready(function () {
         });
     };
 
+});
+
+$(document).ready(function () {
+    $('#resetBtn').click(function () {
+        location.reload();
+        
+
+    })
+});
+$(document).ready(function () {
+    $('#level2').click(function () {
+        window.location.href = 'level2.html';
+    })
 });
 
 

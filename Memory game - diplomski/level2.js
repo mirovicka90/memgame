@@ -96,7 +96,18 @@ $(document).ready(function () {
     };
 
 });
+$(document).ready(function () {
+    $('#level1').click(function () {
+        window.location.href = 'level1.html';
+    })
+});
+$(document).ready(function () {
+    $('#resetBtn').click(function () {
+        location.reload();
 
+
+    })
+});
 
 
 
