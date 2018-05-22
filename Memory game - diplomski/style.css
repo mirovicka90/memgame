@@ -1,24 +1,26 @@
 body{
     background:url(images/js.gif);
+    width: 100%;
+    height: 100%;
 }
 .margin-bottom-10 {
     margin-bottom:10px;
 }
 #div-form{
-    margin-top:100px;
+    margin-top:200px;
     margin-left:auto;
     margin-right:auto;    
     width: 30%;
     height: 150px;
-    position: relative;
-    top: 100px;
     border: 7px solid rgb(36, 189, 36);
     border-radius: 50px;
     padding: 10px;
     font: 1.3em sans-serif;
     font-family: 'Times New Roman', Times, serif;
-    color:black;
+    color:white;
     background: rgb(14, 204, 8);
+    text-align: left;
+
    
 }
 
@@ -28,31 +30,23 @@ body{
   
 }
 
-.btn{
-    font: 0.7em sans-serif;
-    font-family: 'Times New Roman', Times, serif;
-    color:black;
-    background:rgb(36, 189, 36);
-    border-radius: 50px;
-    position: relative;
-    bottom:45px;
-    left: 30px;
-    width: 90px;
-    height: 90px;
-}
+    .btn{
+        background: rgb(14, 204, 8);
+        border-radius: 30px;
 
-#resetBtn{
-    position: relative;
-    left: 850px;
-    top:30px;
-    border-radius: 50px;
-    background: rgb(36, 189, 36);
-    color:black;
-    font: 0.7em sans-serif;
-    font-family: 'Times New Roman', Times, serif;
-    width: 50px;
-    height: 50px;
-}
+        
+       
+    }
+    
+
+    #resetBtn{
+        background: rgb(14, 204, 8);
+        border-radius: 30px;
+       
+    }
+
+
+
 #username{
     background: white;
 

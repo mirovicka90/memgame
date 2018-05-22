@@ -1,6 +1,7 @@
 body{
-    background: pink;
+    background: springgreen;
 }
+
 #mb{
     background:palegreen;
     border: #999 1px solid;
@@ -43,9 +44,7 @@ body{
     background: chartreuse;
     border-radius: 30px;
     float: right;
-    position: relative;
-    bottom: 500px;
-    right: 70px;
+    
 }
 
 #resetBtn{
@@ -55,8 +54,5 @@ body{
     background: chartreuse;
     border-radius: 30px;
     float: right;
-    position: relative;
-    bottom: 400px;
-    left: 80px;
-
+    
 }

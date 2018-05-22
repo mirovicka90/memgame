@@ -15,7 +15,7 @@ var LoginView = function (model, element) {
 };
 //dohvatamo elemente iz HTML 
 LoginView.prototype.render = function () {
-    this.element.innerHTML = '<div id="div-form"><form action=""><div class="margin-bottom-10"><label for="username" style="display:inline-block;width:100px">Username:</label><input type="text" id="username"></div><class="margin-bottom-10"><label for="password" style="display:inline-block;width:100px">Password:</label><input type="password" id="password"></div<div><button type="button" id="login" class="btn">Login</button></div><div><button id="resetBtn" type="reset" value="reset">Reset</button></div></form></div>';
+    this.element.innerHTML = '<div id="div-form"><form action=""><div class="margin-bottom-10"><label for="username" style="display:inline-block;width:100px">Username:</label><input type="text" id="username"></div><class="margin-bottom-10"><label for="password" style="display:inline-block;width:100px">Password:</label><input type="password" id="password"></div<div><button type="button" id="login" class="btn">Login</button><button id="resetBtn" type="reset" value="reset">Reset</button></div></form></div>';
     //na dugme kacimo click event
     document.getElementById('login').addEventListener('click', this.handleLogin);
     document.getElementById('resetBtn').addEventListener('click', this.resetForm);

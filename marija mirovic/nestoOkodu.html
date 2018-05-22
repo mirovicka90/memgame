@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+	<title> Memorijska igrica</title>
+	<link rel="stylesheet" type="text/css" href="styles.css ">
+
+</head>
+
+<body>
+
+	<header>
+		<marquee>
+			<img src="capture.jpg">
+			<h1>Moja igra memorije</h1>
+
+		</marquee>
+	</header>
+
+	<div class="nav">
+		<ul>
+			<li>
+				<a href="index.html">Home</a>
+			</li>
+			<li>
+				<a class="active" href="about.html">About</a>
+			</li>
+		</ul>
+	</div>
+
+
+
+
+	<div class="content">
+
+		<div class="jumbotron">
+			<h2> HTML JS I CSS </h2>
+			<p> Verovali ili ne , da bi isprogramirali ovu zanimljivu igricu, sve što nam je potrebno, jeste znanje HTML, JavaScripta
+				i CSS.
+			</p>
+			<p> Za početak, ono što sam zamislila je da arihitektura koda bude organizovana pomoću MVC-a. </p>
+			<p> MVC se sastoji od tri kontrolera, modela koji je odgovoran za rad sa podacima, modela koji je odgovoran za prikaz podataka
+				na GUI-u, i modela koji je odgovoran za vezu između prethodna dva. </p>
+			<p> Slike sam ubacila u HTML u posebne divove, i zatim ih preko ID dohvatala dinamički u JS-u. </p>
+			<p> Na svaki div dodala sam click event. </p>
+			<p> Takođe sam napisala funkicju za mešanje niza, s obzirom dam sam sve slike smestila u poseban niz. Funkcija se zove SUFFLE
+				i vraća pomenuti niz slika, ali izmešan. </p>
+			<p> Pomoću Jquery-a sam ubacila animacije SHOW i HIDE, koje sam dodala na svaku sliku, dohvatajući je dinamički po ID-u. </p>
+			<p> Pošto je cilj igrice naći dve iste slike, radila sam proveru za prethodni i trenutni klik. </p>
+			<p> Na početku sam stavila, da su oba null. </p>
+			<p> Ukoliko, je prethodni klik različit od null, i ukoliko su iste sličice, treba da ostanu otvorene, što sam postigla, takođe,
+				metodom STOP, pomoću Jquery biblioteke, sa divova u kojima su dve iste slike, sam uklonila event click pomoću UNBIND
+				metode u Jquery-u. </p>
+			<p> Ubacila sam dugme za restart igre. </p>
+
+
+			<a class="btn " href="https://github.com/mirovicka90/memgame" role="button">Learn more</a>
+		</div>
+
+
+	</div>
+
+	<div class="footer">
+		<div class="ft">
+			Copyright © by MM
+		</div>
+	</div>
+
+</body>
+
+</html>

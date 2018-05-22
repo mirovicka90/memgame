@@ -1,13 +1,25 @@
+
+
 body{
     background: aqua;
+    width:500px;
+    height:700px;
 }
+
+
+
 #memory_board{
     background:url(images/large.gif);
     border: #999 1px solid;
     width:500px;
     height:700px;
-    padding:24px;
-    margin:0px auto;
+    margin: auto;
+    border: 3px solid green;
+    padding: 30px;
+    
+   
+    
+
 }
 
 .image{
@@ -38,9 +50,9 @@ body{
     background: chartreuse;
     border-radius: 30px;
     float: right;
-    position: relative;
-    bottom: 300px;
-    right: 100px;
+  
+    margin-left:auto;
+    margin-right:auto;  
 }
 
 #resetBtn{
@@ -48,9 +60,13 @@ body{
     height: 70px;
     width: 150px;
     background: chartreuse;
+    
     border-radius: 30px;
     float: right;
-    position: relative;
-    bottom: 200px;
-    right: -50px;;
+    display: inline;
+    margin-bottom: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+   
 }
