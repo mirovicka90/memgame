@@ -1,10 +1,11 @@
-var images = ['images/jedan.png', 'images/dva.png', 'images/tri.jpg',
-    'images/cetiri.gif', 'images/pet.jpg', 'images/sest.png', 'images/sest.png', 'images/pet.jpg',
-    'images/cetiri.gif', 'images/tri.jpg', 'images/dva.png', 'images/jedan.png'];
+var cards = ['images/1.png', 'images/2.png', 'images/3.png', 'images/4.png', 'images/5.png', 'images/6.png', 'images/7.png',
+    'images/8.png', 'images/9.png', 'images/10.png', 'images/11.png', 'images/12.png', 'images/13.png', 'images/14.png', 'images/15.png',
+    'images/16.png', 'images/16.png', 'images/15.png', 'images/14.png', 'images/13.png', 'images/12.png', 'images/11.png', 'images/10.png',
+    'images/9.png', 'images/8.png', 'images/7.png', 'images/6.png', 'images/5.png',
+    'images/4.png', 'images/3.png', 'images/2.png', 'images/1.png'];
 
 var previousIndex = null;
 var currentIndex = null;
-
 
 var count = null;
 var counter = null;
@@ -29,7 +30,7 @@ function init() {
     document.getElementById("name-1").textContent = 'Player2';
 
 
-    shuffle(images);
+    shuffle(cards);
 }
 
 
@@ -46,15 +47,15 @@ var clickOnDiv = function () {
     $(this.children[0]).show(1000);
     $(this.children[0]).hide(2000);
 
-    currentIndex = parseInt(this.getAttribute("id").replace('div_', '')) - 1;
+    currentIndex = parseInt(this.getAttribute("id").replace('n_', '')) - 1;
 
-    if (previousIndex != null && previousIndex !== currentIndex && images[previousIndex] === images[currentIndex]) {
+    if (previousIndex != null && previousIndex !== currentIndex && cards[previousIndex] === cards[currentIndex]) {
 
         console.log("BINGO");
 
 
-        var bingoImgId_1 = '#img_' + (previousIndex + 1);
-        var bingoImgId_2 = '#img_' + (currentIndex + 1);
+        var bingoImgId_1 = '#i_' + (previousIndex + 1);
+        var bingoImgId_2 = '#i_' + (currentIndex + 1);
         $(bingoImgId_1).stop(true, true);
         $(bingoImgId_2).stop(true, true);
         setTimeout(() => {
@@ -63,8 +64,8 @@ var clickOnDiv = function () {
             $(bingoImgId_2).show();
         }, 200);
 
-        var bingoDivId_1 = '#div_' + (previousIndex + 1);
-        var bingoDivId_2 = '#div_' + (currentIndex + 1);
+        var bingoDivId_1 = '#n_' + (previousIndex + 1);
+        var bingoDivId_2 = '#n_' + (currentIndex + 1);
 
         $(bingoDivId_1).unbind('click');
         $(bingoDivId_2).unbind('click');
@@ -96,20 +97,20 @@ function removeDivListeners() {
 }
 
 
-function shuffle(images) {
-    var ctr = images.length, temp, index;
+function shuffle(cards) {
+    var ctr = cards.length, temp, index;
     while (ctr > 0) {
         index = Math.floor(Math.random() * ctr);
         ctr--;
-        temp = images[ctr];
-        images[ctr] = images[index];
-        images[index] = temp;
+        temp = cards[ctr];
+        cards[ctr] = cards[index];
+        cards[index] = temp;
     }
-    for (i = 0; i < images.length; i++) {
-        var imgId = 'img_' + (i + 1);
-        document.getElementById(imgId).src = images[i];
+    for (i = 0; i < cards.length; i++) {
+        var imgId = 'i_' + (i + 1);
+        document.getElementById(imgId).src = cards[i];
     }
-    return images;
+    return cards;
 
 }
 
@@ -142,13 +143,13 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-    $('#intermediate').click(function () {
-        alert("Welcome to the intermediate level!")
-        window.location.href = 'level2.html';
+    $('#easy').click(function () {
+        alert("Welcome to the easy level!")
+        window.location.href = 'level1.html';
     })
-    $('#hard').click(function () {
-        alert("Welcome to hard level!")
-        window.location.href = 'level3.html';
+    $('#intermediate').click(function () {
+        alert("Welcome to intermediate level!")
+        window.location.href = 'level2.html';
     })
 
 });
@@ -156,7 +157,7 @@ $(document).ready(function () {
 
 // startujemo tajmer
 function startTimer() {
-    count = 25;
+    count = 60;
     counter = setInterval(timer, 1000);
 
 }
@@ -183,7 +184,7 @@ function timer() {
         if (activePlayer === 1) {
 
             alert("Game over!");
-            //whoIsWinner();
+
 
             return;
 
@@ -208,11 +209,11 @@ function startGameForSecondPlayer() {
 
     $(".img").hide();
 
-    shuffle(images);
+    shuffle(cards);
 
-    for (i = 0; i < images.length; i++) {
-        var imgId = 'img_' + (i + 1);
-        document.getElementById(imgId).src = images[i];
+    for (i = 0; i < cards.length; i++) {
+        var imgId = 'i_' + (i + 1);
+        document.getElementById(imgId).src = cards[i];
     }
 
     addDivListeners();
@@ -239,3 +240,30 @@ document.querySelector('.btn').addEventListener('click', function () {
     }
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

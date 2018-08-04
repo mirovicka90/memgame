@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="level3.css">
+    <title>My memory game - level 3</title>
+</head>
+
+<body>
+
+    <section class="score-panel">
+        <div class="score-board">
+            <span id="scoreboard">Scoreboard:</span>
+            <div>
+                <div>
+                    <div class="player-0-panel active">
+                        <div class="player-name" id="name-0">Player 1</div>
+                        <span>Moves:</span>
+                        <span class="moves-0" id="m-0">0</span>
+                        <span>
+                            Score:
+                        </span>
+                        <span class="player-score" id="score-0"> 43</span>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="player-1-panel">
+                    <div class="player-name" id="name-1">2</div>
+                    <span>Moves:</span>
+                    <span class="moves-1" id="m-1">0</span>
+                    <span>Score:</span>
+                    <span class="player-score" id="score-1">72</span>
+
+                </div>
+            </div>
+        </div>
+
+        <span id="timer">Timer:</span>
+        <span id="counter">60:00</span>
+
+
+
+    </section>
+
+    <div id='membord'>
+        <div id="n_1" class="image">
+            <img id="i_1" class="img" src="images/1.png" alt="" srcset="">
+        </div>
+        <div id="n_2" class="image">
+            <img id="i_2" class="img" src="images/2.png" alt="" srcset="">
+        </div>
+        <div id="n_3" class="image">
+            <img id="i_3" class="img" src="images/3.png" alt="" srcset="">
+        </div>
+        <div id="n_4" class="image">
+            <img id="i_4" class="img" src="images/4.png" alt="" srcset="">
+        </div>
+        <div id="n_5" class="image">
+            <img id="i_5" class="img" src="images/5.png" alt="" srcset="">
+        </div>
+        <div id="n_6" class="image">
+            <img id="i_6" class="img" src="images/6.png" alt="" srcset="">
+        </div>
+        <div id="n_7" class="image">
+            <img id="i_7" class="img" src="images/7.png" alt="" srcset="">
+        </div>
+        <div id="n_8" class="image">
+            <img id="i_8" class="img" src="images/8.png" alt="" srcset="">
+        </div>
+        <div id="n_9" class="image">
+            <img id="i_9" class="img" src="images/9.png" alt="" srcset="">
+        </div>
+        <div id="n_10" class="image">
+            <img id="i_10" class="img" src="images/10.png" alt="" srcset="">
+        </div>
+        <div id="n_11" class="image">
+            <img id="i_11" class="img" src="images/11.png" alt="" srcset="">
+        </div>
+        <div id="n_12" class="image">
+            <img id="i_12" class="img" src="images/12.png" alt="" srcset="">
+        </div>
+        <div id="n_13" class="image">
+            <img id="i_13" class="img" src="images/13.png" alt="" srcset="">
+        </div>
+        <div id="n_14" class="image">
+            <img id="i_14" class="img" src="images/14.png" alt="" srcset="">
+        </div>
+        <div id="n_15" class="image">
+            <img id="i_15" class="img" src="images/15.png" alt="" srcset="">
+        </div>
+        <div id="n_16" class="image">
+            <img id="i_16" class="img" src="images/16.png" alt="" srcset="">
+        </div>
+        <div id="n_17" class="image">
+            <img id="i_17" class="img" src="images/16.png" alt="" srcset="">
+        </div>
+        <div id="n_18" class="image">
+            <img id="i_18" class="img" src="images/15.png" alt="" srcset="">
+        </div>
+        <div id="n_19" class="image">
+            <img id="i_19" class="img" src="images/14.png" alt="" srcset="">
+        </div>
+        <div id="n_20" class="image">
+            <img id="i_20" class="img" src="images/13.png" alt="" srcset="">
+        </div>
+        <div id="n_21" class="image">
+            <img id="i_21" class="img" src="images/12.png" alt="" srcset="">
+
+        </div>
+        <div id="n_22" class="image">
+            <img id="i_22" class="img" src="images/11.png" alt="" srcset="">
+
+        </div>
+        <div id="n_23" class="image">
+            <img id="i_23" class="img" src="images/10.png" alt="" srcset="">
+        </div>
+        <div id="n_24" class="image">
+            <img id="i_24" class="img" src="images/9.png" alt="" srcset="">
+        </div>
+        <div id="n_25" class="image">
+            <img id="i_25" class="img" src="images/8.png" alt="" srcset="">
+        </div>
+        <div id="n_26" class="image">
+            <img id="i_26" class="img" src="images/7.png" alt="" srcset="">
+        </div>
+        <div id="n_27" class="image">
+            <img id="i_27" class="img" src="images/6.png" alt="" srcset="">
+        </div>
+        <div id="n_28" class="image">
+            <img id="i_28" class="img" src="images/5.png" alt="" srcset="">
+        </div>
+        <div id="n_29" class="image">
+            <img id="i_29" class="img" src="images/4.png" alt="" srcset="">
+        </div>
+        <div id="n_30" class="image">
+            <img id="i_30" class="img" src="images/3.png" alt="" srcset="">
+        </div>
+        <div id="n_31" class="image">
+            <img id="i_31" class="img" src="images/2.png" alt="" srcset="">
+        </div>
+        <div id="n_32" class="image">
+            <img id="i_32" class="img" src="images/1.png" alt="" srcset="">
+        </div>
+
+
+        <div>
+            <button id="easy" type="level1">Easy level</button>
+        </div>
+        <div>
+            <button id="intermediate" type="level2">Intermediate level</button>
+        </div>
+        <div>
+            <button id="resetBtn" class="btn" type="reset">New game</button>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="level3.js"></script>
+</body>
+
+</html>
