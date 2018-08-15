@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Memory game</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div id="main-div">
+        <form id="my-form" method="post">
+            <div>
+                <label id="pl1" for="namePlayer1">Player1:</label>
+                <input type="text" id="namePlayer1" name="user_namePlayer1" placeholder="Player1" value='Player1' required>
+            </div>
+            <br>
+            <div id="p2">
+                <label id="pl2" for="namePlayer2">Player 2:</label>
+                <input type="text" id="namePlayer2" name="user_namePlayer2" placeholder="Player2" value='Player2' required>
+            </div>
+            <div>
+                <br>
+
+                <label id='time' for="timer">Set up timer:</label>
+
+                <select id='timer' required>
+                    <option hidden value="">Choose here</option>
+                    <option value="25">25s</option>
+                    <option value="40">40s</option>
+                    <option value="60">60s</option>
+                </select>
+
+            </div>
+            <div id="choose">
+                <br>
+                <label for="level">Choose level:</label>
+                <br>
+                <br>
+                <input id="easy" type="radio" name="level" value="easyLevel" checked required> Easy level
+                <br>
+                <input id="intermediate" type="radio" name="level" value="intermediateLevel" checked required> Intermediate level
+                <br>
+                <input id="hard" type="radio" name="level" value="hardLevel" checked required> Hard Level
+            </div>
+            <br>
+            <br>
+            <div>
+                <button id="buttonStart" class='btn' type="button">Start game</button>
+            </div>
+            <br>
+            <div>
+                <button id="buttonReset" type="reset">Reset settings</button>
+            </div>
+        </form>
+    </div>
+    <footer>&copy; Copyright 2018 by Marija Mirovic </footer>
+
+    <script src="form.js"></script>
+
+</body>
+
+</html>
