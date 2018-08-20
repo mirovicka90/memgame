@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+	<title> Igra memorije</title>
+	<link rel="stylesheet" type="text/css" href="style.css ">
+
+</head>
+
+<body>
+
+	<header>
+		<marquee>
+			<img src="images/smajli.jpg">
+			<h1>Igra memorije</h1>
+
+		</marquee>
+	</header>
+
+	<div class="nav">
+		<ul>
+			<li>
+				<a href="index.html">Početna</a>
+			</li>
+			<li>
+				<a href="nestoOkodu.html">Aplikacija</a>
+			</li>
+			<li>
+				<a href="about.html">Kontakt</a>
+			</li>
+		</ul>
+	</div>
+
+
+
+
+	<div class="content">
+
+		<div class="jumbotron">
+			<h2> HTML JAVASCRIPT JQUERY I CSS </h2>
+			<p> Verovali ili ne , da bi napravili ovu aplikaciju , sve što nam je potrebno, jeste znanje HTML-a, JavaScript-a, Jquery-a
+				i CSS-a.
+			</p>
+			<p>Aplikacija ima configuration stranu, sa inputima za imena igrača, čije su difoltne vrednosti Player1 i Player2.</p>
+			<p>Takođe, na configuration strani postoji dropdown lista za setovanje tajmera, odnosno dužine trajanja igrice, kao i radio
+				button za setovaje tezine igrice, odnosno nivoa.</p>
+			<p>Klikom na dugme START GAME, otvaramo HTML stranu sa odabranim imenima igrača, nivoom i odabranim tajmerom.</p>
+			<p>Igra memorije ima tri nivoa, lakši, srednji i najteži nivo.</p>
+			<p>Na sva tri nivoa su raličiti tajmeri, i svaki nivo ima razlčit broj slika, pa tako prvi ima 12, drugi 24, a treći nivo
+				ima čak 34 slike. </p>
+			<p>Igrica ima dva igrača, kao i scoreboard na svakom nivou, pobednik je razume se onaj, koji nađe više parova istih slika.
+			</p>
+			<p> Kako bi saznali ko je pobednik treba da kliknemo dugme NEW GAME , i u alertu će nam se pojaviti ime pobednika.</p>
+			<p> Slike sam ubacila u HTML u posebne divove, i zatim ih preko ID dohvatala dinamički u JS-u. </p>
+			<p> Na svaki div dodala sam click event, pomoću addEventListeners ugrađene funkcije. </p>
+			<p> Takođe sam napisala funkicju za mešanje niza, s obzirom dam sam sve slike smestila u poseban niz. Funkcija se zove SHUFFLE
+				i vraća pomenuti niz slika, ali izmešan. </p>
+			<p> Pomoću Jquery-a sam ubacila animacije SHOW i HIDE, koje sam dodala na svaku sliku, dohvatajući je dinamički po ID-u. </p>
+			<p> Pošto je cilj igrice naći dve iste slike, radila sam proveru za prethodni i trenutni klik. </p>
+			<p> Na početku sam stavila, da su oba null. </p>
+			<p> Ukoliko, je prethodni klik različit od null, i ukoliko su iste sličice, treba da ostanu otvorene, što sam postigla, takođe,
+				metodom STOP, pomoću Jquery biblioteke, sa divova u kojima su dve iste slike, sam uklonila event click pomoću UNBIND
+				metode u Jquery-u. </p>
+			<p> Ubacila sam dugme za restart igre, kao i dugme SETTINGS koje nas vodi do configuration strane. </p>
+
+
+			<a class="btn " href="https://github.com/mirovicka90/memgame" role="button">Više informacija</a>
+		</div>
+
+
+	</div>
+
+	<footer class="ft">&copy; Copyright 2018 by Marija Mirovic</footer>
+
+
+</body>
+
+</html>
